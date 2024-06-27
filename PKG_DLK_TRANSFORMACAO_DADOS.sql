@@ -1,0 +1,101 @@
+create or replace PACKAGE DLK_TRANSFORMACAO_DADOS AS
+
+PROCEDURE P_MAIN; 
+
+END DLK_TRANSFORMACAO_DADOS;
+/
+
+create or replace PACKAGE BODY DLK_TRANSFORMACAO_DADOS AS 
+
+PROCEDURE P_MAIN AS 
+BEGIN
+
+DELETE FROM DLK_ANIMES
+WHERE ROWID IN (
+    SELECT ROWID
+    FROM (
+        SELECT ROWID, ROW_NUMBER() OVER (PARTITION BY id, title, synopsis, genre, aired, episodes,  score, img_url,link ORDER BY ROWID) AS rnum
+        FROM DLK_ANIMES 
+        order by ranked, members, popularity desc
+    )
+    WHERE rnum > 1
+);
+
+
+    INSERT INTO TRA_GENERO_PARTICIONADO (ID, genre)
+    SELECT ID, genre
+    FROM TABLE(f_particionar_genero()); 
+    
+    
+    
+--------------------------------------------------------
+
+-- INSERT DA TABELA DE DOMINIO DE GENERO, CRIANDO O INSERT DELA A PARTIR DO PARTICIONAMENTO DA FUNCAO
+
+INSERT INTO TD_GENERO
+SELECT ROW_NUMBER() OVER (ORDER BY genre) AS num,
+       genre  
+FROM (
+    SELECT DISTINCT genre
+    FROM TRA_GENERO_PARTICIONADO
+    WHERE GENRE IS NOT NULL
+);
+
+
+    
+--------------------------------------------------------
+-- INSERT NA TABELA ASSOCIATIVA ENTRE ANIME E GENERO A PARTIR DO PARTICIONAMENTO DA FUNCAO
+
+INSERT INTO GENERO_ANIME
+SELECT genero_anime_seq.NEXTVAL,
+A.ID,
+B.ID -- SELECT *
+FROM TRA_GENERO_PARTICIONADO A
+JOIN TD_GENERO B
+ON A.GENRE = B.NOME;
+
+
+--------------------------------------------------------
+-- INSERT NA TABELA ANIME COM AS INFORMAÇÕES DA TABELA DLK_ANIME
+INSERT INTO ANIME (ID, TITLE, EPISODES, MEMBERS, POPULARITY, RANKED, SCORE )    
+SELECT A.ID, TITLE, EPISODES, MEMBERS, POPULARITY, RANKED, SCORE   FROM DLK_ANIMES A ; 
+
+
+
+
+
+
+--------------------------------------------------------
+-- UPDATE NA TABELA DE ANIME PARA INSERIR A EXIBIÇÃO PARTICIONADA
+
+
+BEGIN
+MERGE INTO ANIME A
+USING (
+    SELECT ID, AIRED_START, AIRED_END 
+    FROM (
+        SELECT B.ID, 
+               B.AIRED_START, 
+               B.AIRED_END, 
+               ROW_NUMBER() OVER (PARTITION BY B.ID ORDER BY B.ID) AS RN
+        FROM TABLE(f_particionar_exibicao()) B
+    ) 
+    WHERE RN = 1
+) B
+ON (A.ID = B.ID)
+WHEN MATCHED THEN 
+    UPDATE SET 
+        A.AIRED_START = B.AIRED_START,
+        A.AIRED_END = B.AIRED_END;
+END;
+
+    
+    
+END P_MAIN;
+
+
+
+
+
+END DLK_TRANSFORMACAO_DADOS;
+/
