@@ -1,4 +1,4 @@
-# Projeto: Dados de Animes (Base 2023)
+# Projeto: Dados de Animes (Base 2020)
 
 ## Objetivo do Projeto
 
