@@ -1,4 +1,4 @@
-# Projeto: Dados de Animes (Base 2023)
+# Projeto: Dados de Animes (Base 2020)
 
 ## Objetivo do Projeto
 
@@ -33,7 +33,7 @@
 
 - **Python:** Para a integração da API com a fonte de dados, tratamento de dados e integração com o banco de dados.
 - **Banco de Dados Relacional:** Oracle e SQLServer para armazenamento dos dados.
-- **ETL:**
+- **ETL:** PowerCenter
 - **Power BI:** Para desenvolvimento dos relatórios e análise de dados.
 
 ## Intuito do Projeto
