@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Animes", "Animes\Animes.dtproj", "{6586B297-BC79-4D66-B2D8-09972EAE1241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6586B297-BC79-4D66-B2D8-09972EAE1241}.Development|Default.ActiveCfg = Development
+		{6586B297-BC79-4D66-B2D8-09972EAE1241}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B3FEC43-3328-4621-AF69-D11CF71AD003}
+	EndGlobalSection
+EndGlobal
