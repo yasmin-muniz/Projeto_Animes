@@ -24,7 +24,8 @@
 - Criar tabelas no banco de dados SQL Server para armazenar informações que serão utilizadas pelo Power BI na análise dos dados.
 - Executar o processo de ETL (extração, transformação e carga) entre as bases de dados Oracle e SQL Server utilizando o Visual Studio.
 
-   * Scripts utilizados nessa etapa: ([ETL](./Scripts_Base_DL))
+   * Scripts utilizados nessa etapa: ([Projeto ETL](./ETL_SSIS/Animes))
+   * Scripts utilizados nessa etapa: ([Fluxograma](./ETL_SSIS/Fluxograma_ETL))
  
 ### Desenvolvimento de Relatórios no Power BI
 
