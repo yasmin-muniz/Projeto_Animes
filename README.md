@@ -5,6 +5,17 @@
 
 - Desenvolver um processo que inclua a extração de um conjunto de dados utilizando Python, o tratamento desses dados e seu armazenamento em um banco de dados relacional (Oracle), configurado para operar como um Data Lake. Em seguida, realizar o ETL (extração, transformação e carga) dos dados tratados, utilizando o Visual Studio para transferi-los para um banco de dados relacional (SQL Server), configurado como um banco de dados operacional (produção). Por fim, utilizar o Power BI para visualizar e analisar esses dados.
 
+## Intuito do Projeto
+
+Este projeto visa evidenciar minhas competências no desenvolvimento utilizando Python, bem como em linguagens PL-SQL e T-SQL, e na implementação de processos ETL com Visual Studio. Além disso, demonstra habilidades em visualização e análise de dados com Power BI. O objetivo é apresentar uma solução abrangente e integrada que cobre diversos aspectos do ciclo de vida dos dados.
+
+## Tecnologias Utilizadas
+
+- **Python:** Para a integração da API com a fonte de dados, tratamento de dados e integração com o banco de dados.
+- **Banco de Dados Relacional:** Oracle e SQLServer para armazenamento dos dados.
+- **ETL:** Visual Studio
+- **Power BI:** Para desenvolvimento do Dashboard e análise de dados.
+
 ## Etapas do Projeto
 
 ### Extração de Dados com Python
@@ -44,13 +55,5 @@
 
 - Aproveitar as funcionalidades de análise do Power BI para identificar padrões, tendências e insights sobre os animes, incluindo, por exemplo, a análise da popularidade, a distribuição por gênero e as correlações entre os animes.
 
-## Tecnologias Utilizadas
 
-- **Python:** Para a integração da API com a fonte de dados, tratamento de dados e integração com o banco de dados.
-- **Banco de Dados Relacional:** Oracle e SQLServer para armazenamento dos dados.
-- **ETL:** Visual Studio
-- **Power BI:** Para desenvolvimento do Dashboard e análise de dados.
 
-## Intuito do Projeto
-
-Com este projeto, quero demonstrar minhas habilidades em desenvolvimento em Python, linguagem PL-SQL e T-SQL e visualização e análise de dados com o Power BI. Mostrando uma solução completa e integrada que aborda diferentes aspectos do ciclo de vida dos dados.
