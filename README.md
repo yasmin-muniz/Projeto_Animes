@@ -7,7 +7,7 @@
 
 ## Intuito do Projeto
 
-Este projeto visa evidenciar minhas competências no desenvolvimento utilizando Python, bem como em linguagens PL-SQL e T-SQL, e na implementação de processos ETL com Visual Studio. Além disso, demonstra habilidades em visualização e análise de dados com Power BI. O objetivo é apresentar uma solução abrangente e integrada que cobre diversos aspectos do ciclo de vida dos dados.
+- Este projeto visa evidenciar minhas competências no desenvolvimento utilizando Python, bem como em linguagens PL-SQL e T-SQL, e na implementação de processos ETL com Visual Studio. Além disso, demonstra habilidades em visualização e análise de dados com Power BI. O objetivo é apresentar uma solução abrangente e integrada que cobre diversos aspectos do ciclo de vida dos dados.
 
 ## Tecnologias Utilizadas
 
