@@ -2,39 +2,52 @@
 
 ## Objetivo do Projeto
 
-- Desenvolver um processo que utilize um dataset que será extraído com Python, realizar o tratamento desses dados e armazená-los em um banco de dados relacional (Oracle), realizar a exportação dos dados tratados para um banco de dados relacional (SQL Server) e utilizar o Power BI para visualizar e analisar esses dados.
+- Desenvolver um processo que inclua a extração de um conjunto de dados utilizando Python, o tratamento desses dados e seu armazenamento em um banco de dados relacional (Oracle), configurado para operar como um Data Lake. Em seguida, realizar o ETL (extração, transformação e carga) dos dados tratados, utilizando o Visual Studio para transferi-los para um banco de dados relacional (SQL Server), configurado como um banco de dados operacional (produção). Por fim, utilizar o Power BI para visualizar e analisar esses dados.
 
 ## Etapas do Projeto
 
 ### Extração de Dados com Python
 
-- Utilizar Python para conectar a API do Kaggle e utilizar o Dataset XXXXX para realizar a inserção dos dados no banco de dados Oracle (no qual esse banco será um DataLake).
+- Utilizar Python para conectar a API do Kaggle e utilizar o Dataset Anime Dataset with Reviews - MyAnimeList ([link aqui](./https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews)) para realizar a inserção dos dados no banco de dados Oracle (configurado para operar como um Data Lake).
+
+  * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
 
 ### Tratamento de Dados
 
-- Realizar limpeza e transformação nos dados para garantir qualidade e consistência, como remoção de duplicatas, normalização de nomes, aplicação das formas normais do banco de dados e etc., através de objetos no banco para organizar e aplicar os tratamentos de dados.
+- Realizar a limpeza e transformação dos dados para garantir qualidade e consistência, incluindo a remoção de duplicatas, a normalização de nomes e a aplicação das formas normais do banco de dados, entre outras práticas. Essas ações deverão ser executadas por meio de objetos no banco de dados, com o objetivo de organizar e aplicar os tratamentos necessários aos dados.
 
-### Armazenamento em Banco de Dados Relacional
+   * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
 
-- Realizar o ETL entre as bases de dados Oracle e SQLServer.
-- Utilizar um banco de dados relacional, como SQLServer, para armazenar os dados tratados.
-- Criar tabelas no banco de dados para armazenar informações sobre os dados.
+### ETL
+ 
+- Criar tabelas no banco de dados SQL Server para armazenar informações que serão utilizadas pelo Power BI na análise dos dados.
+- Executar o processo de ETL (extração, transformação e carga) entre as bases de dados Oracle e SQL Server utilizando o Visual Studio.
 
+   * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
+ 
 ### Desenvolvimento de Relatórios no Power BI
 
-- Conectar o Power BI ao banco de dados relacional para importar os dados dos animes.
-- Criar relatórios e visualizações no Power BI para analisar e explorar os dados. Isso pode incluir gráficos de barras, gráficos de dispersão, tabelas dinâmicas, entre outros.
+- Estabelecer a conexão do Power BI com o banco de dados relacional para importar os dados dos animes.
+- Desenvolver dashboards no Power BI para analisar e explorar os dados, o que pode incluir a criação de gráficos de barras, gráficos de dispersão, tabelas dinâmicas, entre outros recursos.
 
+   * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
+
+<div align="center">
+  <a href="https://app.powerbi.com/view?r=eyJrIjoiZTkxODczMWQtNGJmZS00MDU0LTllZDktMzRiNzNkYTFkMjM1IiwidCI6IjcwNjBlYjFhLWZkY2MtNGVhOS05MTk4LWQ5N2FhNDkyZmJjMiJ9" target="_blank">
+    <img src="" alt="Assista a apresentação" width="480" />
+  </a>
+</div>
+ 
 ### Análise de Dados e Insights
 
-- Utilizar as funcionalidades de análise do Power BI para identificar padrões, tendências e insights sobre os animes. Por exemplo, análise de popularidade, distribuição por gênero, correlações entre os animes, etc.
+- Aproveitar as funcionalidades de análise do Power BI para identificar padrões, tendências e insights sobre os animes, incluindo, por exemplo, a análise da popularidade, a distribuição por gênero e as correlações entre os animes.
 
 ## Tecnologias Utilizadas
 
 - **Python:** Para a integração da API com a fonte de dados, tratamento de dados e integração com o banco de dados.
 - **Banco de Dados Relacional:** Oracle e SQLServer para armazenamento dos dados.
-- **ETL:** PowerCenter
-- **Power BI:** Para desenvolvimento dos relatórios e análise de dados.
+- **ETL:** Visual Studio
+- **Power BI:** Para desenvolvimento do Dashboard e análise de dados.
 
 ## Intuito do Projeto
 
