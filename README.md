@@ -10,21 +10,34 @@
 
 - Utilizar Python para conectar a API do Kaggle e utilizar o Dataset Anime Dataset with Reviews - MyAnimeList ([link aqui](./https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews)) para realizar a inserção dos dados no banco de dados Oracle (configurado para operar como um Data Lake).
 
+  * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
+
 ### Tratamento de Dados
 
 - Realizar a limpeza e transformação dos dados para garantir qualidade e consistência, incluindo a remoção de duplicatas, a normalização de nomes e a aplicação das formas normais do banco de dados, entre outras práticas. Essas ações deverão ser executadas por meio de objetos no banco de dados, com o objetivo de organizar e aplicar os tratamentos necessários aos dados.
 
-### Armazenamento em Banco de Dados Relacional
+   * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
 
+### ETL
+ 
+- Criar tabelas no banco de dados SQL Server para armazenar informações que serão utilizadas pelo Power BI na análise dos dados.
 - Executar o processo de ETL (extração, transformação e carga) entre as bases de dados Oracle e SQL Server utilizando o Visual Studio.
-- Utilizar um banco de dados relacional, como o SQL Server, para o armazenamento dos dados tratados.
-- Criar tabelas no banco de dados para armazenar informações relacionadas aos dados.
 
+   * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
+ 
 ### Desenvolvimento de Relatórios no Power BI
 
 - Estabelecer a conexão do Power BI com o banco de dados relacional para importar os dados dos animes.
 - Desenvolver dashboards no Power BI para analisar e explorar os dados, o que pode incluir a criação de gráficos de barras, gráficos de dispersão, tabelas dinâmicas, entre outros recursos.
 
+   * Scripts utilizados nessa etapa: ([link aqui](./Scripts_Base_DL))
+
+<div align="center">
+  <a href="https://app.powerbi.com/view?r=eyJrIjoiZTkxODczMWQtNGJmZS00MDU0LTllZDktMzRiNzNkYTFkMjM1IiwidCI6IjcwNjBlYjFhLWZkY2MtNGVhOS05MTk4LWQ5N2FhNDkyZmJjMiJ9" target="_blank">
+    <img src="" alt="Assista a apresentação" width="480" />
+  </a>
+</div>
+ 
 ### Análise de Dados e Insights
 
 - Aproveitar as funcionalidades de análise do Power BI para identificar padrões, tendências e insights sobre os animes, incluindo, por exemplo, a análise da popularidade, a distribuição por gênero e as correlações entre os animes.
