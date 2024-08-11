@@ -11,13 +11,13 @@
 
 - Utilizar Python para conectar a API do Kaggle e utilizar o Dataset Anime Dataset with Reviews - MyAnimeList ([link aqui](./https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews)) para realizar a inserção dos dados no banco de dados Oracle (configurado para operar como um Data Lake).
 
-  * Scripts utilizados nessa etapa: ([Python](./Scripts_Base_DL))
+  * Scripts utilizados nessa etapa: ([Python](./Scripts_Python))
 
 ### Tratamento de Dados
 
 - Realizar a limpeza e transformação dos dados para garantir qualidade e consistência, incluindo a remoção de duplicatas, a normalização de nomes e a aplicação das formas normais do banco de dados, entre outras práticas. Essas ações deverão ser executadas por meio de objetos no banco de dados, com o objetivo de organizar e aplicar os tratamentos necessários aos dados.
 
-   * Scripts utilizados nessa etapa: ([PL/SQL](./Scripts_Base_DL))
+   * Scripts utilizados nessa etapa: ([PL/SQL](./Scripts_PLSQL))
 
 ### ETL
  
