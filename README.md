@@ -1,59 +1,101 @@
 <h1 align="center"> MyAnimeList DataSet </h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ETL-Visual%20Studio-5C2D91?style=for-the-badge&logo=visualstudio&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+</p>
 
-## Objetivo do Projeto
+---
 
-- Desenvolver um processo que inclua a extração de um conjunto de dados utilizando Python, o tratamento desses dados e seu armazenamento em um banco de dados relacional (Oracle), configurado para operar como um Data Lake. Em seguida, realizar o ETL (extração, transformação e carga) dos dados tratados, utilizando o Visual Studio para transferi-los para um banco de dados relacional (SQL Server), configurado como um banco de dados operacional (produção). Por fim, utilizar o Power BI para visualizar e analisar esses dados.
+## 🎯 Objetivo do Projeto  
 
-## Intuito do Projeto
+Desenvolver um processo que inclua:  
 
-- Este projeto visa evidenciar minhas competências no desenvolvimento utilizando Python, bem como em linguagens PL-SQL e T-SQL, e na implementação de processos ETL com Visual Studio. Além disso, demonstra habilidades em visualização e análise de dados com Power BI. O objetivo é apresentar uma solução abrangente e integrada que cobre diversos aspectos do ciclo de vida dos dados.
+- Extração de um conjunto de dados utilizando **Python**  
+- Tratamento e armazenamento no **Oracle** (Data Lake)  
+- ETL (extração, transformação e carga) para o **SQL Server** (produção) usando **Visual Studio**  
+- Visualização e análise dos dados no **Power BI**
 
-## Tecnologias Utilizadas
+---
 
-- **Python:** Para a integração da API com a fonte de dados, tratamento de dados e integração com o banco de dados.
-- **Banco de Dados Relacional:** Oracle e SQLServer para armazenamento dos dados.
-- **ETL:** Visual Studio
-- **Power BI:** Para desenvolvimento do Dashboard e análise de dados.
+## 🚀 Intuito do Projeto  
 
-## Etapas do Projeto
+Este projeto visa evidenciar competências em:  
 
-### Extração de Dados com Python
+- Programação em **Python**  
+- Linguagens **PL-SQL** e **T-SQL**  
+- Implementação de processos **ETL** (com SSIS no Visual Studio)  
+- **Visualização e análise de dados** com Power BI  
 
-- Utilizar Python para conectar a API do Kaggle e utilizar o Dataset Anime Dataset with Reviews - MyAnimeList ([link aqui](https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews)) para realizar a inserção dos dados no banco de dados Oracle (configurado para operar como um Data Lake).
+O objetivo é apresentar uma solução integrada que cobre diversos aspectos do **ciclo de vida dos dados**.  
 
-  * Scripts utilizados nessa etapa: ([Python](./Scripts_Python))
+---
 
-### Tratamento de Dados
+## 🛠️ Tecnologias Utilizadas  
 
-- Realizar a limpeza e transformação dos dados para garantir qualidade e consistência, incluindo a remoção de duplicatas, a normalização de nomes e a aplicação das formas normais do banco de dados, entre outras práticas. Essas ações deverão ser executadas por meio de objetos no banco de dados, com o objetivo de organizar e aplicar os tratamentos necessários aos dados.
+- **Python:** Integração com API, tratamento e inserção de dados  
+- **Oracle & SQL Server:** Armazenamento dos dados (Data Lake e Produção)  
+- **ETL (SSIS – Visual Studio):** Integração entre bases Oracle e SQL Server  
+- **Power BI:** Dashboards interativos e análises  
 
-   * Scripts utilizados nessa etapa: ([PL/SQL](./Scripts_PLSQL))
+---
 
-### ETL
- 
-- Criar tabelas no banco de dados SQL Server para armazenar informações que serão utilizadas pelo Power BI na análise dos dados.
-- Executar o processo de ETL (extração, transformação e carga) entre as bases de dados Oracle e SQL Server utilizando o Visual Studio.
+## 📌 Etapas do Projeto  
 
-   * Scripts utilizados nessa etapa: ([Projeto ETL](./ETL_SSIS/Animes))
-   * Scripts utilizados nessa etapa: ([Fluxograma](./ETL_SSIS/Fluxograma_ETL))
- 
-### Desenvolvimento de Relatórios no Power BI
+### 🔹 Extração de Dados com Python  
 
-- Estabelecer a conexão do Power BI com o banco de dados relacional para importar os dados dos animes.
-- Desenvolver dashboards no Power BI para analisar e explorar os dados, o que pode incluir a criação de gráficos de barras, gráficos de dispersão, tabelas dinâmicas, entre outros recursos.
+- Conexão à API do Kaggle  
+- Utilização do dataset: [Anime Dataset with Reviews - MyAnimeList](https://www.kaggle.com/datasets/marlesson/myanimelist-dataset-animes-profiles-reviews)  
+- Inserção no banco Oracle (Data Lake)  
 
+📂 [Scripts Python](./Scripts_Python)  
+
+---
+
+### 🔹 Tratamento de Dados  
+
+- Limpeza e transformação dos dados  
+- Remoção de duplicatas  
+- Normalização de nomes  
+- Aplicação de formas normais no banco  
+
+📂 [Scripts PL/SQL](./Scripts_PLSQL)  
+
+---
+
+### 🔹 ETL  
+
+- Criação de tabelas no SQL Server  
+- Processo de ETL entre Oracle → SQL Server (via SSIS no Visual Studio)  
+
+📂 [Projeto ETL](./ETL_SSIS/Animes)  
+📂 [Fluxograma do ETL](./ETL_SSIS/Fluxograma_ETL)  
+
+---
+
+### 🔹 Relatórios no Power BI  
+
+- Conexão com SQL Server  
+- Criação de dashboards interativos (gráficos, dispersões, tabelas dinâmicas etc.)  
 
 <div align="center">
-<h3> Preview do Dashboard </h3>
+  <h3>📊 Preview do Dashboard</h3>
   <a href="https://app.powerbi.com/view?r=eyJrIjoiZTkxODczMWQtNGJmZS00MDU0LTllZDktMzRiNzNkYTFkMjM1IiwidCI6IjcwNjBlYjFhLWZkY2MtNGVhOS05MTk4LWQ5N2FhNDkyZmJjMiJ9" target="_blank">
     <img src="./Powerbi/imagem_capa.png" alt="Assista a apresentação" width="480" />
   </a>
-</div>
- 
-### Análise de Dados e Insights
+</div>  
 
-- Aproveitar as funcionalidades de análise do Power BI para identificar padrões, tendências e insights sobre os animes, incluindo, por exemplo, a análise da popularidade, a distribuição por gênero e as correlações entre os animes.
+---
 
+## 🔎 Análises e Insights  
 
+Com o Power BI foi possível explorar pontos como:  
 
+- Popularidade dos animes  
+- Distribuição por gênero  
+- Correlações e padrões nos dados  
+
+---
